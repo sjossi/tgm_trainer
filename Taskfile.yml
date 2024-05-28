@@ -1,0 +1,18 @@
+# https://taskfile.dev
+
+version: '3'
+
+vars:
+  GREETING: Hello, World!
+
+tasks:
+  default:
+    cmds:
+      - >
+        mame -autoboot_script tgm.lua
+        -state f
+        -sound none
+        -window -resolution 1024x768
+        tgm2p
+        # -speed 0.2
+    silent: true
